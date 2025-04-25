@@ -4,11 +4,22 @@
 #' @importFrom tidyr pivot_longer
 #' @param x Benthic Macroinvertebrate dataframe (csv or data.frame).
 #' @param Sample_ID Name of column containing Sample Name.
+#' @details
+#' The function uses reference tables to score the abundance and presence-absence
+#' data, and combines these into an overall score for each sample. A template
+#' for the data input can be found in the Google Sheets template here:
+#' \url{https://docs.google.com/spreadsheets/d/1Z0Y5O0bQXqJ_14iYOwn4UVe4L4MdhdfV7HSwolNhvdg/edit?usp=sharing}.
+#' @examples
+#' # Example Usage:
+#' # Load the example dataset included in the package
+#' data("test_whpt_dataset")
+#' WHPT_ASPT_Score(test_whpt_dataset)
 #' @export
 WHPT_ASPT_Score <- function(x, Sample_Label = NULL) {
   data("Ref_Long", envir = environment())
   data("WHPT_Families", envir = environment())
   data("P_A_WHPT_Scores", envir = environment())
+  data("test_whpt_dataset", envir = environment())
 
   # Determine sample ID column
   if (!is.null(Sample_Label)) {

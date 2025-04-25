@@ -14,3 +14,15 @@ WHPT_ASPT_Score(x, Sample_Label = NULL)
 \description{
 Returns the WHPT-ASPT score for each sample submitted.
 }
+\details{
+The function uses reference tables to score the abundance and presence-absence
+data, and combines these into an overall score for each sample. A template
+for the data input can be found in the Google Sheets template here:
+\url{https://docs.google.com/spreadsheets/d/1Z0Y5O0bQXqJ_14iYOwn4UVe4L4MdhdfV7HSwolNhvdg/edit?usp=sharing}.
+}
+\examples{
+# Example Usage:
+# Load the example dataset included in the package
+data("test_whpt_dataset")
+WHPT_ASPT_Score(test_whpt_dataset)
+}
