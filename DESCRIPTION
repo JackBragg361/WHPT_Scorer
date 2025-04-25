@@ -11,3 +11,4 @@ Imports:
   tidyr,
   magrittr,
   readr
+URL: Template for use in this package can be found at https://docs.google.com/spreadsheets/d/1Z0Y5O0bQXqJ_14iYOwn4UVe4L4MdhdfV7HSwolNhvdg/edit?usp=sharing
