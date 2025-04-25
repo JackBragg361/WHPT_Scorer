@@ -10,11 +10,6 @@ WHPT_ASPT_Score <- function(x, Sample_Label = NULL) {
   data("WHPT_Families", envir = environment())
   data("P_A_WHPT_Scores", envir = environment())
 
-  library(dplyr)
-  library(tidyr)
-  library(readr)
-  library(magrittr)
-
   # Determine sample ID column
   if (!is.null(Sample_Label)) {
     if (!(Sample_Label %in% colnames(x))) {
