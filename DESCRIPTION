@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Jack Bragg
 Maintainer: jackbragg361@gmail.com
 Description: Returns the WHPT-ASPT score for each sample submitted.
-License: What license it uses
+License: MIT + file LICENSE
 Imports:
   dplyr,
   tidyr,
